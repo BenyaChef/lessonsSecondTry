@@ -89,4 +89,3 @@ const isChecked = false,
 	isClosed = true;
 
 console.log(!isChecked && isClosed); // ! - оператор отрицания, в первой переменной значение false, но благодаря операторй "! отрицания" значение меняется на true
-
