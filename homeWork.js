@@ -15,5 +15,8 @@ let lastWorchingFilmA = prompt("Один из последних просмот�
     gradeA = prompt("На сколько вы его оцените?", ""),
     gradeB = prompt("На сколько вы его оцените?", "");
 
+personalMovieDB.movies[lastWorchingFilmA] = gradeA;
+personalMovieDB.movies[lastWorchingFilmB] = gradeB;
 
-    console.log(personalMovieDB);
+
+console.log(personalMovieDB);
