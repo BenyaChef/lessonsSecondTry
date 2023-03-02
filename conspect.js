@@ -158,3 +158,27 @@
 // 	console.log("I'm very angry");
 // }
 
+
+// Цыклы !
+
+let num = 50;
+
+// while (num <= 55) {    // выполнять действие пока условие в скобках выполняется 
+// 	console.log(num);
+// 	num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55);
+
+for (let i = 1; i < 10; i++) {
+    if (i === 6) {
+        // break;
+        continue;
+    }
+
+    console.log(i);
+}
