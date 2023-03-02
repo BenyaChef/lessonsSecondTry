@@ -11,9 +11,9 @@ const personalMovieDB = {
 };
 
 let lastWorchingFilmA = prompt("Один из последних просмотреных фильмов?", ""),
-    lastWorchingFilmB = prompt("Один из последних просмотреных фильмов?", ""),
-    gradeA = prompt("На сколько вы его оцените?", ""),
-    gradeB = prompt("На сколько вы его оцените?", "");
+	lastWorchingFilmB = prompt("Один из последних просмотреных фильмов?", ""),
+	gradeA = prompt("На сколько вы его оцените?", ""),
+	gradeB = prompt("На сколько вы его оцените?", "");
 
 personalMovieDB.movies[lastWorchingFilmA] = gradeA;
 personalMovieDB.movies[lastWorchingFilmB] = gradeB;
