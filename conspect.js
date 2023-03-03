@@ -441,10 +441,31 @@
 
 const usdCurr = 40;
 const eurCurr = 42.2;
+const discount = 0.9;
 
 function convert (amount, curr) {
-    console.log(curr * amount);
+    return curr * amount;
 }
 
-convert(500, usdCurr);
-convert(500, eurCurr);
+function promotion (result) {
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCurr);
+promotion(res);
+// promotion(convert(500, usdCurr));
+
+function test () {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        if ( i === 3 ) {
+            return;      // перед return неставить перенос строки потому что такой код может сломаться 
+        }
+    }
+    console.log("Done");
+}
+
+test();
+
+function doNothing() {} // даже пустая функция возвращает информацию, а именно undefinde
+console.log(doNothing() === undefined);
