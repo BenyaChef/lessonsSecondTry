@@ -39,29 +39,28 @@ console.log(personalMovieDB);
 
 let num = 0;
 
-// while (num < 2) {
-// 	const a = prompt("Один из последних просмотреных фильмов?", "");
-// 	const b = prompt("На сколько вы его оцените?", "");
-// 	num++;
-	// if (a != null && b != null && a != "" & b != "" && a.length < 50) {
-	// 	personalMovieDB.movies[a] = b;
-	// 	console.log("done");
-	// } else {
-	// 	console.log("error");
-	// 	num--;
-	// }
-// }
-
-do {
+while (num < 2) {
 	const a = prompt("Один из последних просмотреных фильмов?", "");
- 	const b = prompt("На сколько вы его оцените?", "");
- 	num++;
+	const b = prompt("На сколько вы его оцените?", "");
 	if (a != null && b != null && a != "" & b != "" && a.length < 50) {
 		personalMovieDB.movies[a] = b;
 		console.log("done");
+		num++;
 	} else {
 		console.log("error");
-		num--;
 	}
 }
-while(num < 2);
+
+// do {
+// 	const a = prompt("Один из последних просмотреных фильмов?", "");
+//  	const b = prompt("На сколько вы его оцените?", "");
+
+// 	if (a != null && b != null && a != "" & b != "" && a.length < 50) {
+// 		personalMovieDB.movies[a] = b;
+// 		console.log("done");
+// 		num++;
+// 	} else {
+// 		console.log("error");
+// 	}
+// }
+// while(num < 2);

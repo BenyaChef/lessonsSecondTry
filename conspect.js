@@ -395,3 +395,56 @@
 
 // console.log(result);
 
+//Function 
+
+// let num = 30;
+
+// function showFirstMessage(text) { // функция существует до её объявления по типу переменной var 
+//     console.log(text);
+//     num = 20; //  переменая объявленая глобально, может быть передана во внутрь функции, может быть изменена и в глобальном смысле 
+// }
+
+// showFirstMessage("Hello world!");// есть понятия как глобальная и локальная переменная !
+// console.log(num); // область видимости, переменная объявленая внутри функции не видима за пределами этой функции! исключения переменная объявленая с помощью устаревшеuо кода var
+
+// console.log(calc(5,7));
+// console.log(calc(4,23));
+// console.log(calc(1,12));
+// console.log(calc(2,8));
+
+// function calc (a,b) {  // функция существует до её объявления по типу переменной var  
+//     return (a + b);
+// }
+
+// function ret() {
+//     let num = 50;
+//     return num;
+// }
+
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function () { // функция экспрешен, выполняется только после объявления, создаёт только тогда когда до неё доходит поток кода
+//     console.log("Hello");
+// };
+
+// logger();
+
+// const calc = (a, b) =>  a + b; //стрелочная функция, не имеет контекста вызова! 
+// const calc = (a, b) => {
+//     console.log("213");
+//     return (a + b);
+// };
+
+
+// console.log(calc(5, 7));
+
+const usdCurr = 40;
+const eurCurr = 42.2;
+
+function convert (amount, curr) {
+    console.log(curr * amount);
+}
+
+convert(500, usdCurr);
+convert(500, eurCurr);
