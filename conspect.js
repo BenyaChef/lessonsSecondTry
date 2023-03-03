@@ -352,3 +352,30 @@ function secondTask() {
 }
 
 secondTask();
+
+function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, "Shopping", 20, "Homework"];
+    const result = [];
+    for (let i = data.length - 1; i >= 0; i--) {
+        result.push(data[i]);
+    }
+    console.log(result);
+    return result;
+}
+
+thirdTask();
+
+function thirdTask() {
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+
+    for (let i = 1; i <= data.length; i++) {
+        result[i - 1] = data[data.length - i]
+    }
+
+    console.log(result);
+    return result;
+}
+
+thirdTask();
