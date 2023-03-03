@@ -318,64 +318,81 @@ for (let i = 0; i < 3; i++) {
 
 // fifthTask();
 
-function firstTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const arr = [3, 5, 8, 16, 20, 23, 50];
-    const result = [];
+// function firstTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const arr = [3, 5, 8, 16, 20, 23, 50];
+//     const result = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        result[i] = arr[i];
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         result[i] = arr[i];
+//     }
     
     
-    console.log(result);
-    return result;
-}
+//     console.log(result);
+//     return result;
+// }
 
-firstTask();
+// firstTask();
 
-function secondTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const data = [5, 10, "Shopping", 20, "Homework"];
+// function secondTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const data = [5, 10, "Shopping", 20, "Homework"];
 
-    for (let i = 0; i < data.length; i++) {
-        if (typeof(data[i]) === "number") {
-           data[i] = data[i] * 2;
-        } else if (typeof(data[i]) === "string") {
-            data[i] = `${data[i]} - done`;
-        }
-    }
+//     for (let i = 0; i < data.length; i++) {
+//         if (typeof(data[i]) === "number") {
+//            data[i] = data[i] * 2;
+//         } else if (typeof(data[i]) === "string") {
+//             data[i] = `${data[i]} - done`;
+//         }
+//     }
     
     
-    console.log(data);
-    return data;
-}
+//     console.log(data);
+//     return data;
+// }
 
-secondTask();
+// secondTask();
 
-function thirdTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const data = [5, 10, "Shopping", 20, "Homework"];
-    const result = [];
-    for (let i = data.length - 1; i >= 0; i--) {
-        result.push(data[i]);
-    }
-    console.log(result);
-    return result;
-}
+// function thirdTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const data = [5, 10, "Shopping", 20, "Homework"];
+//     const result = [];
+//     for (let i = data.length - 1; i >= 0; i--) {
+//         result.push(data[i]);
+//     }
+//     console.log(result);
+//     return result;
+// }
 
-thirdTask();
+// thirdTask();
 
-function thirdTask() {
-    const data = [5, 10, 'Shopping', 20, 'Homework'];
-    const result = [];
+// function thirdTask() {
+//     const data = [5, 10, 'Shopping', 20, 'Homework'];
+//     const result = [];
 
-    for (let i = 1; i <= data.length; i++) {
-        result[i - 1] = data[data.length - i]
-    }
+//     for (let i = 1; i <= data.length; i++) {
+//         result[i - 1] = data[data.length - i]
+//     }
 
-    console.log(result);
-    return result;
-}
+//     console.log(result);
+//     return result;
+// }
 
-thirdTask();
+// thirdTask();
+
+const lines = 5;
+let result = "";
+
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result);
+
+for (let i = 0;)
