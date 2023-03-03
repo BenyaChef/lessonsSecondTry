@@ -214,12 +214,12 @@
 //     console.log("error");
 // }
 
-for (let i = 0; i < 3; i++) {
-	console.log(i);
-	for (let j = 0; j < 3; j++) {
-		console.log(j);
-	}
-}
+// for (let i = 0; i < 3; i++) {
+// 	console.log(i);
+// 	for (let j = 0; j < 3; j++) {
+// 		console.log(j);
+// 	}
+// }
 
 // *
 // **
@@ -380,8 +380,8 @@ for (let i = 0; i < 3; i++) {
 
 // thirdTask();
 
-const lines = 5;
-let result = "";
+// const lines = 5;
+// let result = "";
 
 // for (let i = 0; i <= lines; i++) {
 //     for (let j = 0; j < lines - i; j++) {
@@ -395,4 +395,3 @@ let result = "";
 
 // console.log(result);
 
-for (let i = 0;)
