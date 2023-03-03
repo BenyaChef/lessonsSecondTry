@@ -161,24 +161,128 @@
 
 // Цыклы !
 
-let num = 50;
+// let num = 50;
 
-// while (num <= 55) {    // выполнять действие пока условие в скобках выполняется 
-// 	console.log(num);
-// 	num++;
+// // while (num <= 55) {    // выполнять действие пока условие в скобках выполняется 
+// // 	console.log(num);
+// // 	num++;
+// // }
+
+// // do {
+// //     console.log(num);
+// //     num++;
+// // }
+// // while (num < 55);
+
+// for (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         // break;
+//         continue;
+//     }
+
+//     console.log(i);
 // }
 
-// do {
-//     console.log(num);
-//     num++;
-// }
-// while (num < 55);
+// console.log( NaN || 2 || undefined );
+// console.log( NaN && 2 && undefined );
+// console.log( 1 && 2 && 3 );
+// console.log( !1 && 2 || !3 );
+// console.log( 25 || null && !3 );
+// console.log( NaN || null || !3 || undefined || 5);
+// console.log( NaN || null && !3 && undefined || 5);
+// console.log( 5 === 5 && 3 > 1 || 5);
 
-for (let i = 1; i < 10; i++) {
-    if (i === 6) {
-        // break;
-        continue;
+// // let hamburger;
+// // const fries = NaN;
+// // const cola = 0;
+// // const nuggets = 2;
+
+
+// // if (hamburger || cola || fries === 3 || nuggets) {
+// //    console.log('Done!');
+// // }
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+
+
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!');
+// } else {
+//     console.log("error");
+// }
+
+for (let i = 0; i < 3; i++) {
+	console.log(i);
+	for (let j = 0; j < 3; j++) {
+		console.log(j);
+	}
+}
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+let result = "";
+const length = 7;
+
+for (let i = 1; i < length; i++) {
+
+    for ( let j = 0; j < i; j++){
+        result += "*";
     }
 
-    console.log(i);
+    result += "\n";
 }
+
+console.log(result);
+
+
+first: for (let i = 0; i < 3; i++) {
+	console.log(`First level: ${i}`);
+	for (let j = 0; j < 3; j++) {
+		console.log(`Second level: ${j}`);
+        for (let k = 0; k < 3; k++) {
+            if (k === 2) continue first; // метка first и команда continue останавливает цикл и возвращает его к месту метки в нашем случае к верхнему циклц, метки нужно называть осознано так же как и переменные 
+            console.log(`Third level: ${k}`);
+        }
+	}
+}
+
+function firstTask() {
+    for (let i = 5; i < 11; i++) {
+        console.log(i)
+    }
+    
+}
+firstTask();
+
+function secondTask() {
+    for ( let i = 20; i > 10; i--) {
+        if (i === 13) {
+            break;
+        }
+        console.log(i);
+    }
+    
+}
+
+secondTask();
+
+function thirdTask() {
+    for (let i = 2; i <= 10; i++) {
+        if ( i % 2 === 0) {
+            console.log(i)
+        }
+    }
+    
+}
+
+thirdTask();
+
+ 
