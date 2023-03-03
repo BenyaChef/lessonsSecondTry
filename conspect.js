@@ -277,7 +277,7 @@ secondTask();
 function thirdTask() {
     for (let i = 2; i <= 10; i++) {
         if ( i % 2 === 0) {
-            console.log(i)
+            console.log(i);
         }
     }
     
@@ -285,4 +285,23 @@ function thirdTask() {
 
 thirdTask();
 
- 
+for (let i = 2; i <= 16; i++) {
+        if (i % 2 === 0) {
+            continue;
+        } else {
+            console.log(i);
+        }
+    }
+
+
+let num = 2;
+
+while (num <= 16) {
+    if (num % 2 === 0) {
+        num++;
+        continue;
+    } else {
+        console.log(num);
+    }
+    num++;
+} 
