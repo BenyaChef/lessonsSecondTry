@@ -471,44 +471,74 @@
 // console.log(doNothing() === undefined);
 
 
-function returnNeighboringNumbers(n) {
-    return [n - 1, n, n + 1];
-}
+// function returnNeighboringNumbers(n) {
+//     return [n - 1, n, n + 1];
+// }
 
-let numbers = returnNeighboringNumbers(5);
+// let numbers = returnNeighboringNumbers(5);
 
-console.log(numbers);
+// console.log(numbers);
 
-function getMathResult (num, length) {
-    if (typeof(length) !== "number" || length <= 0) {
-        return num;
-}//  else {
-    //     let result = "";
-    //     for (let i = 1; i <= length; i++) {
-    //         result += num * i + "---";
-    //     }
-    //     return result.slice(0, -3);
-    // }
+// function getMathResult (num, length) {
+//     if (typeof(length) !== "number" || length <= 0) {
+//         return num;
+// }//  else {
+//     //     let result = "";
+//     //     for (let i = 1; i <= length; i++) {
+//     //         result += num * i + "---";
+//     //     }
+//     //     return result.slice(0, -3);
+//     // }
     
-    // let result = "";
-    //     for (let i = 1; i < length; i++) {
-    //         result += num * i + "---";
-    //     }
-    //     return result.slice(0, -3);
-    let result = "";
-        for(let i = 1; i <= length; i++) {
-            if (i === length) {
-                result += `${num * i}`;
-            } else {
-                result += `${num * i}---`
-            }
-        }
-    return result;
-}
+//     // let result = "";
+//     //     for (let i = 1; i < length; i++) {
+//     //         result += num * i + "---";
+//     //     }
+//     //     return result.slice(0, -3);
+//     let result = "";
+//         for(let i = 1; i <= length; i++) {
+//             if (i === length) {
+//                 result += `${num * i}`;
+//             } else {
+//                 result += `${num * i}---`;
+//             }
+//         }
+//     return result;
+// }
 
 
 
 
-let num = getMathResult (5,3);
+// let num = getMathResult (5,3);
 
-console.log(num);
+// console.log(num);
+
+
+// Методы и свойства строк и чисел 
+
+const str = "test";
+
+// console.log(str.length);
+// console.log(str.toUpperCase()); // присваевает строке верхний регистр, возвращает новое значение. изначальная переменная остаётся неизменной 
+let strUp = str.toUpperCase();
+console.log(str);
+console.log(strUp);
+
+const fruit = "Some fruit";
+console.log(fruit.indexOf("it")); // метод может помочь узнать, есть ли такой кусочек строки в искомой строке.
+
+console.log(logg.slice(1, -4)); // метод обрезания стркои, где первый аргнумент указывает начало строки, а второй аргумент указывает сколько нужно отрезать от конца строки 
+
+
+const logg = "Hello world";
+// console.log(logg.substring(7, 4)); // тоже что и slice, но не поддерживает отрицательные значения 
+
+console.log(logg.substr(0, 5));// откуда начать и сколько символов вырезать
+
+
+const num = 12.4;
+console.log(Math.round(num)); // округление до ближайшего целого числа
+
+const test = "12.2px";
+// console.log(parseInt(test));// преображение строки в число. Меиод для чисел, но если ему передать строку то обрезается .2px и возвращает 12 
+console.log(parseFloat(test));// возвращает из строки число, вместе с плавающей точкой
