@@ -516,29 +516,85 @@
 
 // Методы и свойства строк и чисел 
 
-const str = "test";
+// const str = "test";
 
-// console.log(str.length);
-// console.log(str.toUpperCase()); // присваевает строке верхний регистр, возвращает новое значение. изначальная переменная остаётся неизменной 
-let strUp = str.toUpperCase();
-console.log(str);
-console.log(strUp);
+// // console.log(str.length);
+// // console.log(str.toUpperCase()); // присваевает строке верхний регистр, возвращает новое значение. изначальная переменная остаётся неизменной 
+// let strUp = str.toUpperCase();
+// console.log(str);
+// console.log(strUp);
 
-const fruit = "Some fruit";
-console.log(fruit.indexOf("it")); // метод может помочь узнать, есть ли такой кусочек строки в искомой строке.
+// const fruit = "Some fruit";
+// console.log(fruit.indexOf("it")); // метод может помочь узнать, есть ли такой кусочек строки в искомой строке.
 
-console.log(logg.slice(1, -4)); // метод обрезания стркои, где первый аргнумент указывает начало строки, а второй аргумент указывает сколько нужно отрезать от конца строки 
-
-
-const logg = "Hello world";
-// console.log(logg.substring(7, 4)); // тоже что и slice, но не поддерживает отрицательные значения 
-
-console.log(logg.substr(0, 5));// откуда начать и сколько символов вырезать
+// console.log(logg.slice(1, -4)); // метод обрезания стркои, где первый аргнумент указывает начало строки, а второй аргумент указывает сколько нужно отрезать от конца строки 
 
 
-const num = 12.4;
-console.log(Math.round(num)); // округление до ближайшего целого числа
+// const logg = "Hello world";
+// // console.log(logg.substring(7, 4)); // тоже что и slice, но не поддерживает отрицательные значения 
 
-const test = "12.2px";
-// console.log(parseInt(test));// преображение строки в число. Меиод для чисел, но если ему передать строку то обрезается .2px и возвращает 12 
-console.log(parseFloat(test));// возвращает из строки число, вместе с плавающей точкой
+// console.log(logg.substr(0, 5));// откуда начать и сколько символов вырезать
+
+
+// const num = 12.4;
+// console.log(Math.round(num)); // округление до ближайшего целого числа
+
+// const test = "12.2px";
+// // console.log(parseInt(test));// преображение строки в число. Меиод для чисел, но если ему передать строку то обрезается .2px и возвращает 12 
+// console.log(parseFloat(test));// возвращает из строки число, вместе с плавающей точкой
+
+
+// const result = Math.pow(5, 2) * 6;
+// console.log(result);
+
+// function calculateVolumeAndArea(num) {
+    
+//         if (typeof (num) !== "number" || num < 0 || !Number.isInteger(num)) { // метод Number.isInteger проверяет на целое число и возвращает  false или true
+//             return "При вычислении произошла ошибка";
+//         }
+
+//         const square = num * num * 6;
+//         const volume = num * num * num;
+//         const result = `Объём куба:${volume}, площадь всей поверхности:${square}`;
+//         return result;
+        
+    
+// }
+
+// function calculateVolumeAndArea(num) {
+//     if (typeof (num) !== "number" || num < 0 || !Number.isInteger(num)) { 
+//            return "При вычислении произошла ошибка";
+//        } 
+//            const square = 6 * (num * num);
+//            const volume = num * num * num;
+//            return `Объём куба:${volume}, площадь всей поверхности:${square}`;
+     
+      
+   
+// }
+
+
+// // calculateVolumeAndArea(6.2);
+
+// console.log(calculateVolumeAndArea(-5));
+
+// function getCoupeNumber(num) {
+//     if (typeof (num) !== "number" || num < 0 || !Number.isInteger(num)) {
+//         return "Ошибка. Проверьте правильность введенного номера места";
+//     } else if (num === 0 || num > 36) {
+//         return "Таких мест в вагоне не существует";
+//     }
+//     return Math.ceil(num / 4);
+// }
+// console.log(getCoupeNumber("10.7"));
+
+
+
+function getTimeFromMinutes(minutes) {
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `Это ${hours} часа и ${mins} минут`;
+}
+
+
+console.log(getTimeFromMinutes(102));
