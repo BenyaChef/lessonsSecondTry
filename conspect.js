@@ -592,9 +592,33 @@
 
 function getTimeFromMinutes(minutes) {
     const hours = Math.floor(minutes / 60);
-    const mins = minutes % 60;
-    return `Это ${hours} часа и ${mins} минут`;
+    const mins = minutes % 60; 
+    if (typeof (minutes) !== "number" || minutes < 0 || !Number.isInteger(minutes)) {
+        return "Ошибка. Проверьте данные!";
+    }
+        if (hours === 1) {
+            return `Это ${hours} час и ${mins} минут`;
+        } else if (hours > 1 && hours <= 4 ) {
+            return `Это ${hours} часа и ${mins} минут`;
+        } else {
+            return `Это ${hours} часов и ${mins} минут`;
+        }
+        
 }
 
 
-console.log(getTimeFromMinutes(102));
+console.log(getTimeFromMinutes(180));
+
+function findMaxNumber(a, b, d, c) {
+    if (typeof(a) !== "number" ||
+        typeof(b) !== "number" ||
+        typeof(c) !== "number" ||
+        typeof(d) !== "number") {
+            return 0;
+        } else {
+            return Math.max(a, b, c, d);
+        }
+    
+}
+
+console.log(findMaxNumber(6, 3, "67", 56));
