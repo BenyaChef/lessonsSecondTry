@@ -439,33 +439,76 @@
 
 // console.log(calc(5, 7));
 
-const usdCurr = 40;
-const eurCurr = 42.2;
-const discount = 0.9;
+// const usdCurr = 40;
+// const eurCurr = 42.2;
+// const discount = 0.9;
 
-function convert (amount, curr) {
-    return curr * amount;
+// function convert (amount, curr) {
+//     return curr * amount;
+// }
+
+// function promotion (result) {
+//     console.log(result * discount);
+// }
+
+// const res = convert(500, usdCurr);
+// promotion(res);
+// // promotion(convert(500, usdCurr));
+
+// function test () {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//         if ( i === 3 ) {
+//             return;      // перед return неставить перенос строки потому что такой код может сломаться 
+//         }
+//     }
+//     console.log("Done");
+// }
+
+// test();
+
+// function doNothing() {} // даже пустая функция возвращает информацию, а именно undefinde
+// console.log(doNothing() === undefined);
+
+
+function returnNeighboringNumbers(n) {
+    return [n - 1, n, n + 1];
 }
 
-function promotion (result) {
-    console.log(result * discount);
-}
+let numbers = returnNeighboringNumbers(5);
 
-const res = convert(500, usdCurr);
-promotion(res);
-// promotion(convert(500, usdCurr));
+console.log(numbers);
 
-function test () {
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-        if ( i === 3 ) {
-            return;      // перед return неставить перенос строки потому что такой код может сломаться 
+function getMathResult (num, length) {
+    if (typeof(length) !== "number" || length <= 0) {
+        return num;
+}//  else {
+    //     let result = "";
+    //     for (let i = 1; i <= length; i++) {
+    //         result += num * i + "---";
+    //     }
+    //     return result.slice(0, -3);
+    // }
+    
+    // let result = "";
+    //     for (let i = 1; i < length; i++) {
+    //         result += num * i + "---";
+    //     }
+    //     return result.slice(0, -3);
+    let result = "";
+        for(let i = 1; i <= length; i++) {
+            if (i === length) {
+                result += `${num * i}`;
+            } else {
+                result += `${num * i}---`
+            }
         }
-    }
-    console.log("Done");
+    return result;
 }
 
-test();
 
-function doNothing() {} // даже пустая функция возвращает информацию, а именно undefinde
-console.log(doNothing() === undefined);
+
+
+let num = getMathResult (5,3);
+
+console.log(num);
