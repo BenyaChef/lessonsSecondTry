@@ -621,4 +621,32 @@ function findMaxNumber(a, b, d, c) {
     
 }
 
-console.log(findMaxNumber(6, 3, "67", 56));
+console.log(findMaxNumber(6, 3, 67, 56));
+
+
+function fib(num) {
+    if (typeof(num) !== "number" || num <= 0 || !Number.isInteger(num)) { // число фибоначи, сам решить не смог, нужно разбираться
+        return "";
+    }
+
+    let result = "";
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first} `;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return result;
+}
+
+console.log(fib(1));
