@@ -114,3 +114,95 @@ function compareNum (a, b) {
 // const product = str.split(", ");  // в переменную product приходят данные от пользователя по средствам переменной str и команды prompt, после этого мы их записываем как массив в переменную product c помощью метода split(), где в кавычка() указываем знак через какой они будут записаные
 // product.sort(); // сортирует элементы массива, но при этом записывает их как строки
 // console.log(product.join("; "));  // метод join позволяет склеить массив в строку с указание разделительного знака
+
+// Передача данных по ссылке или по значению ! 
+// когда мы работаем с приметивными данными (строки, числа) то они передаются по значению, но когда мы работаем с объектами (объкты, массивы, функции) ---
+// то передача идёт не по значению, а по ссылке ! 
+const obj = {
+    a: 5,
+    b: 1
+};
+
+// const copy = obj; // здесь мы не создали новый объект идентичный исходному, а передали ссылку на исходный объект 
+
+// copy.a = 10; //  когда мы в этом объкте поменяли значения ключа "а" то это же праизошлё и в объкте "obj"
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {   // способ кланирования объекта, поверхностный ! 
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+// newNumbers.c.x = 10; // значение ключа "х" вложенного объекта "с", меняется в исходном и кланированом объекте. Нужно применять глубокий способ кланирования
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+
+const add = {
+    d: 17,
+    e: 20
+};
+
+// console.log(Object.assign(numbers, add)); // таким образом мы совместили два объекта, создав третий поверхностный объект!
+const clone = Object.assign({}, add); // так мы создали поверхностную копию объкта 
+
+clone.d = 20;
+
+console.log(add);
+console.log(clone);
+
+const oldArray = ["a", "b", "c"];
+const newArray = oldArray.slice(); // создаём поверхностную копию массива! 
+
+newArray[1] = "qwerty";
+console.log(newArray);
+console.log(oldArray);
+
+
+const video = ["youtube", "vimeo", "rutube"],
+      blogs = ["wordpress", "livejournal", "blogger"],
+      internet = [...video, ...blogs, "vk", "fb"]; // спред оператор "..." позволяет развернуть структуры на отдельные элементы
+
+      console.log(internet);
+
+
+      function log (a, b, c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+      }
+
+      const num = [2, 7, 6];
+
+      log(...num); // в данном случае в функцию мы вместо аргументов передаём массив, который разварачивается благодаря спред оператору
+
+      const array = ["a", "b"];
+      const newArr = [...array]; // создание поверхностнной копии благодаря спред оператору 
+
+      const q = {
+        one: 1,
+        two: 2
+      };
+
+      const newQ = {...q}; // создание поверхностной копии объкта благодаря спред оператору !!! 
+
