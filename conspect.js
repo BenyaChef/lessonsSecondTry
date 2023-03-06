@@ -607,7 +607,7 @@ function getTimeFromMinutes(minutes) {
 }
 
 
-console.log(getTimeFromMinutes(180));
+console.log(getTimeFromMinutes(60));
 
 function findMaxNumber(a, b, d, c) {
     if (typeof(a) !== "number" ||
