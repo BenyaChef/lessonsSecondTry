@@ -227,12 +227,27 @@
 // console.log(grow(array));
 
 
-const obj = {
-    exp: 3,
-    age: 24,
-    skill: ["php", "js"]
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ["ru", "eng"],
+        programmingLangs: {
+            js: "20%",
+            php: "10%"
+        },
+        exp: "1 month"
+    }
 };
 
-function showExperience(o) {
-    
+function showExperience(plan) {
+    let {name, age, skills:{languages, programmingLangs, exp} } = plan;
+    console.log(exp);
+    return exp;
+}
+
+showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan) {
+
 }
