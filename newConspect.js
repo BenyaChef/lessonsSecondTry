@@ -107,7 +107,7 @@
 // // }
 
 // for (let value of arr) {
-//     console.log(value);  //у метода перебора массива for of есть + в том, что в это переборе можно использовать такие команды как continue и brea!
+//     console.log(value);  //у метода перебора массива for of есть + в том, что в это переборе можно использовать такие команды как continue и break!
 // }
 
 // const str = prompt("", "");
@@ -275,3 +275,35 @@ function showProgrammingLangs(plan) {
 
 
 showProgrammingLangs(personalPlanPeter);
+
+const arrNull = [];
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let str = "";
+
+//     arr.length === 0 ? str = "Семья пуста" : str = "Семья состоит из:";
+
+//     arr.forEach(function(members) {
+//         str += ` ${members}`;
+//     });
+//     return str;
+// }
+// console.log(showFamily(arrNull));
+
+
+function showFamily(arr) {
+    
+    if (arr.length === 0) {
+       return "Семья пуста";
+        } else {
+        let str = "Семья состоит из:";
+        for (let i of arr) {
+            str += ` ${i}`;
+        }
+        return str;
+    }
+    
+}
+
+console.log(showFamily(arrNull));
