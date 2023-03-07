@@ -308,36 +308,78 @@ const family = ["Peter", "Ann", "Alex", "Linda"];
 
 // console.log(showFamily(arrNull));
 
-const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
+// const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
 
 
-function standardizeStrings(arr) {
-    let str = "";
-    for (let i of arr) {
-        str += `${i.toLowerCase()} \n`;
+// function standardizeStrings(arr) {
+//     let str = "";
+//     for (let i of arr) {
+//         str += `${i.toLowerCase()} \n`;
+//     }
+//     return str;
+// }
+
+// console.log(standardizeStrings(favoriteCities));
+
+// const num = 5;
+// const someString = "This is some strange string";
+
+// function reverse(str) {
+//     if (typeof(str) === "string") {
+//     let strReverse = str.split("").reverse().join("");
+//     return strReverse;
+// } else {
+//     return "Ошибка";
+// }
+// }
+
+// console.log(reverse(num));
+
+
+
+// // var str = "фывапролд";
+// // var strReverse = str.split("").reverse().join("");
+
+// // console.log(strReverse);
+
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//     let str = "";
+//     arr.length === 0 ? str = "Нет доступных валют" : "Доступные валюты:\n";
+
+//     arr.forEach(function(curr, i){
+//         if (curr !== missingCurr) {
+//             str += `${curr}\n`;
+//         }        
+//     });
+
+//     return str;
+// }
+
+// console.log(availableCurr([...additionalCurrencies,...baseCurrencies], "USD"));
+
+
+//   ООП
+
+
+
+const soldier = {
+    health: 400,
+    armour: 100,
+    sayHello: function() {
+        console.log("Hello!");
     }
-    return str;
-}
+};
 
-console.log(standardizeStrings(favoriteCities));
+const jonh = Object.create(soldier);// мы создаём новый объект jonh который будет прототипно наследоваться от soldier!
 
-const num = 5;
-const someString = "This is some strange string";
+// const jonh = {
+//     health: 100
+// };
 
-function reverse(str) {
-    if (typeof(str) === "string") {
-    let strReverse = str.split("").reverse().join("");
-    return strReverse;
-} else {
-    return "Ошибка";
-}
-}
+// Object.setPrototypeOf(jonh, soldier); // мы установили прототип для john от солдата !
 
-console.log(reverse(num));
-
-
-
-// var str = "фывапролд";
-// var strReverse = str.split("").reverse().join("");
-
-// console.log(strReverse);
+jonh.sayHello();
