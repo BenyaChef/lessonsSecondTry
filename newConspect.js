@@ -277,7 +277,7 @@ function showProgrammingLangs(plan) {
 showProgrammingLangs(personalPlanPeter);
 
 const arrNull = [];
-const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+const family = ["Peter", "Ann", "Alex", "Linda"];
 
 // function showFamily(arr) {
 //     let str = "";
@@ -292,18 +292,52 @@ const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 // console.log(showFamily(arrNull));
 
 
-function showFamily(arr) {
+// function showFamily(arr) {
     
-    if (arr.length === 0) {
-       return "Семья пуста";
-        } else {
-        let str = "Семья состоит из:";
-        for (let i of arr) {
-            str += ` ${i}`;
-        }
-        return str;
+//     if (arr.length === 0) {
+//        return "Семья пуста";
+//         } else {
+//         let str = "Семья состоит из:";
+//         for (let i of arr) {
+//             str += ` ${i}`;
+//         }
+//         return str;
+//     }
+    
+// }
+
+// console.log(showFamily(arrNull));
+
+const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
+
+
+function standardizeStrings(arr) {
+    let str = "";
+    for (let i of arr) {
+        str += `${i.toLowerCase()} \n`;
     }
-    
+    return str;
 }
 
-console.log(showFamily(arrNull));
+console.log(standardizeStrings(favoriteCities));
+
+const num = 5;
+const someString = "This is some strange string";
+
+function reverse(str) {
+    if (typeof(str) === "string") {
+    let strReverse = str.split("").reverse().join("");
+    return strReverse;
+} else {
+    return "Ошибка";
+}
+}
+
+console.log(reverse(num));
+
+
+
+// var str = "фывапролд";
+// var strReverse = str.split("").reverse().join("");
+
+// console.log(strReverse);
