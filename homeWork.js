@@ -99,3 +99,4 @@ writeYourGeners();
 // 	}
 // }
 // while(num < 2);
+let cos = 5;
