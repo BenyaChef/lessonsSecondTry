@@ -383,3 +383,10 @@ const jonh = Object.create(soldier);// мы создаём новый объек
 // Object.setPrototypeOf(jonh, soldier); // мы установили прототип для john от солдата !
 
 jonh.sayHello();
+
+
+console.log("a">"b");
+
+
+//  чет лень одолела ( =
+ 
