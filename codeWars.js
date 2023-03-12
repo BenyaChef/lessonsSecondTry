@@ -9,3 +9,7 @@ function getMaxOfArray(numArray) {
 
 
 console.log(getMaxOfArray(arr));
+
+function correct (string) {
+    
+}
