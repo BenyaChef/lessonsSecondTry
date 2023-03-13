@@ -227,57 +227,57 @@
 // console.log(grow(array));
 
 
-const personalPlanPeter = {
-    name: "Peter",
-    age: "29",
-    skills: {
-        languages: ["ru", "eng"],
-        programmingLangs: {
-            js: "20%",
-            php: "10%",
-            ruby: "30%"
-        },
-        exp: "1 month"
-    },
-    showAgeAndLangs: function(plan) {
-        const {age} = plan;
-        const {languages} = plan.skills;
-        let str = `Мне ${age} лет и я владею языка:`;
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ["ru", "eng"],
+//         programmingLangs: {
+//             js: "20%",
+//             php: "10%",
+//             ruby: "30%"
+//         },
+//         exp: "1 month"
+//     },
+//     showAgeAndLangs: function(plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let str = `Мне ${age} лет и я владею языка:`;
 
-        languages.forEach(function(lang) {
-            str += `${lang.toUpperCase()} `;
-        });
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()} `;
+//         });
         
-        console.log(str);
-        return str;
+//         console.log(str);
+//         return str;
         
-    }
-};
+//     }
+// };
 
-personalPlanPeter.showAgeAndLangs(personalPlanPeter);
-// function showExperience(plan) {
-//     let {exp} = plan.skills;
-//     console.log(exp);
-//     return exp;
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+// // function showExperience(plan) {
+// //     let {exp} = plan.skills;
+// //     console.log(exp);
+// //     return exp;
+// // }
+
+// // showExperience(personalPlanPeter);
+
+// function showProgrammingLangs(plan) {
+//     let str = "";
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`; // оператор += добовляет и присваевает к переменной результат работы цикла, тоесть сначало цикл добавляет результат первой пробежки, а потом присваевает результат второй пробежки, но при этом старый результат сохраняется 
+//     }
+//     console.log(str);
+//     return str;
 // }
 
-// showExperience(personalPlanPeter);
 
-function showProgrammingLangs(plan) {
-    let str = "";
-    const {programmingLangs} = plan.skills;
-    for (let key in programmingLangs) {
-        str += `Язык ${key} изучен на ${programmingLangs[key]}\n`; // оператор += добовляет и присваевает к переменной результат работы цикла, тоесть сначало цикл добавляет результат первой пробежки, а потом присваевает результат второй пробежки, но при этом старый результат сохраняется 
-    }
-    console.log(str);
-    return str;
-}
+// showProgrammingLangs(personalPlanPeter);
 
-
-showProgrammingLangs(personalPlanPeter);
-
-const arrNull = [];
-const family = ["Peter", "Ann", "Alex", "Linda"];
+// const arrNull = [];
+// const family = ["Peter", "Ann", "Alex", "Linda"];
 
 // function showFamily(arr) {
 //     let str = "";
@@ -366,26 +366,26 @@ const family = ["Peter", "Ann", "Alex", "Linda"];
 
 
 
-const soldier = {
-    health: 400,
-    armour: 100,
-    sayHello: function() {
-        console.log("Hello!");
-    }
-};
-
-const jonh = Object.create(soldier);// мы создаём новый объект jonh который будет прототипно наследоваться от soldier!
-
-// const jonh = {
-//     health: 100
+// const soldier = {
+//     health: 400,
+//     armour: 100,
+//     sayHello: function() {
+//         console.log("Hello!");
+//     }
 // };
 
-// Object.setPrototypeOf(jonh, soldier); // мы установили прототип для john от солдата !
+// const jonh = Object.create(soldier);// мы создаём новый объект jonh который будет прототипно наследоваться от soldier!
 
-jonh.sayHello();
+// // const jonh = {
+// //     health: 100
+// // };
+
+// // Object.setPrototypeOf(jonh, soldier); // мы установили прототип для john от солдата !
+
+// jonh.sayHello();
 
 
-console.log("a">"b");
+// console.log("a">"b");
 
 
 //  чет лень одолела ( =
